@@ -1,0 +1,198 @@
+<html>
+<body><body bgcolor="#000000">
+
+<h1>
+
+<img src="11wda1.jpg" alt="Pulpit rock" width="55%" height="45%">
+
+<font size="8" color="white" >Roksana Rahman MUA</font><br><p> </p>
+
+</h1>
+<link rel="shortcut icon" href="http://office.microsoft.com/favicon.ico?b=15" />
+
+<style type="text/css">
+ul {
+    width: 100%;
+    font-family: Arial, Verdana;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul li {
+    display: block;
+    position: relative;
+    float: left;
+}
+li ul {
+    display: none;
+}
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: #DAA520;
+    border-top: 1px solid #000000;
+    padding: 5px 15px 5px 15px;
+    background: #000000;
+    margin-left: 1px;
+    white-space: nowrap;
+}
+ul li a:hover {
+background: #3b3b3b;
+}
+li:hover ul {
+    display: block;
+    position: absolute;
+}
+li:hover li {
+    float: none;
+    font-size: 11px;
+}
+li:hover a { background: #3b3b3b; }
+li:hover li a:hover {
+    background: #1e7c9a;
+}
+
+</style>
+</head>
+
+
+
+
+
+
+
+<br/>
+<body>
+
+
+<ul id="menu">
+
+
+
+<li><a href="1RoksanaWeb.htm">Home</a></li>
+
+
+
+<li><a href="mainportfolio.htm">Make-up Portfolio</a>
+<ul>
+<li><a href="fashion.htm">Fashion Make-up</a></li>
+<li><a href="bridal.htm">Bridal Make-up</a></li>
+<li><a href="parties.htm">Party Make-up</a></li>
+<li><a href="tv.htm">TV Make-up</a></li>
+</ul>
+</li>
+
+
+
+<li><a href="Contact.htm">Contact</a></li>
+
+
+</ul>
+
+
+<body>
+<br/>
+<br/>
+<font size="5.5" color="white" >Roksana Rahman</font> <br>
+<font size="5.5" color="white" >Mobile: 00447459848703</font> <br>
+<font size="5.5" color="white" >E-mail: roksanarahmanmua@outlook.com</font> <br>
+<font size="5.5" color="white" >Barking, UK</font><br>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<font size="7.5" color="#DAA520" >BOOK NOW</font> 
+
+
+<br/>
+<br/>
+<form action="mail.php" method="POST">
+<p><font size="2.5" color="white"  >Name:</font></p> <input type="text" name="name">
+<p><font size="2.5" color="white"  >Location:</font></p> <input type="text" name="location">
+<p><font size="2.5" color="white"  >Type of Event:</font></p> <input type="text" name="type">
+<p><font size="2.5" color="white"  >Date of Event:</font></p> <input type="text" name="date">
+<p><font size="2.5" color="white"  >Time to Finish Make-up:</font></p> <input type="text" name="time">
+<p><font size="2.5" color="white"  >*E-mail:</font></p> <input type="text" name="email">
+<p><font size="2.5" color="white"  >Phone:</font></p> <input type="text" name="phone">
+
+
+<br />
+<p><font size="2.5" color="white"  >Message:</font></p><textarea name="message" rows="6" cols="25"></textarea><br />
+<input type="submit" value="Send"><input type="reset" value="Clear">
+</form>
+
+
+<?php
+$name = $_POST['name'];
+$location = $_POST['location'];
+$type = $_POST['type'];
+$date = $_POST['date'];
+$time = $_POST['time'];
+$phone = $_POST['phone'];
+$email = $_POST['email'];
+$message = $_POST['message'];
+
+$formcontent="Name: $name \n Location: $location \n TypeOfEvent: $type \n DateOfEvent: $date \n TimeToFinish: $time \n Phone: $phone \n Message: $message";
+$recipient = "drk.sky@gmail.com";
+$subject = "Make-up Booking Form";
+$mailheader = "From: $email \r\n";
+mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+echo "Thank You!";
+?>
+
+
+
+<br/>
+<br/>
+
+
+
+<a target="_blank" title="find on Facebook" href="https://www.facebook.com/roksanarahmanmua/"><img 
+alt="follow me on facebook" 
+src="C:\Users\user\Desktop\rk\rkweb\facebookicn.png" border=0></a>
+
+
+
+<a target="_blank" title="find on Instagram" href="https://www.instagram.com/roksanarahmanmua/"><img 
+alt="follow me on facebook" 
+src="C:\Users\user\Desktop\rk\rkweb\instagramicn.png" border=0></a>
+
+
+
+
+
+<br/>
+<br/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<br/>
+<br/>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+<style>
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    background-color: ash;
+    color: white;
+    text-align: center;
+}
+</style>
+
+<div class="footer">
+  <p>Website Developer: Asifur Chowdhury (07888322052)</p>
+</div>
