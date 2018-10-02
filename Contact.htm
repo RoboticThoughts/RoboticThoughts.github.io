@@ -110,39 +110,28 @@ li:hover li a:hover {
 
 <br/>
 <br/>
-<form action="mail.php" method="POST">
-<p><font size="2.5" color="white"  >Name:</font></p> <input type="text" name="name">
+
+<h2>Send e-mail to https://formspree.io/roksanarahmanmua@gmail.com:</h2>
+
+<form action="https://formspree.io/roksanarahmanmua@gmail.com" method="post" enctype="text/plain">
+<p><font size="2.5" color="white"  >Name:</font></p> <input type="text" name="Name"><br>
+<p><font size="2.5" color="white"  >*E-mail:</font></p> <input type="text" name="E-mail"><br> 
 <p><font size="2.5" color="white"  >Location:</font></p> <input type="text" name="location">
-<p><font size="2.5" color="white"  >Type of Event:</font></p> <input type="text" name="type">
+<p><font size="2.5" color="white"  >Type of Event:</font></p>  <input type="text" name="type">
 <p><font size="2.5" color="white"  >Date of Event:</font></p> <input type="text" name="date">
 <p><font size="2.5" color="white"  >Time to Finish Make-up:</font></p> <input type="text" name="time">
-<p><font size="2.5" color="white"  >*E-mail:</font></p> <input type="text" name="email">
 <p><font size="2.5" color="white"  >Phone:</font></p> <input type="text" name="phone">
 
 
-<br />
-<p><font size="2.5" color="white"  >Message:</font></p><textarea name="message" rows="6" cols="25"></textarea><br />
-<input type="submit" value="Send"><input type="reset" value="Clear">
+
+
+
+
+<p><font size="2.5" color="white"  >*Message:</font></p><textarea name="message" rows="6" cols="25"></textarea><br />
+<input type="submit" value="Send"><input type="reset" value="Clear"><br><br>
+
 </form>
 
-
-<?php
-$name = $_POST['name'];
-$location = $_POST['location'];
-$type = $_POST['type'];
-$date = $_POST['date'];
-$time = $_POST['time'];
-$phone = $_POST['phone'];
-$email = $_POST['email'];
-$message = $_POST['message'];
-
-$formcontent="Name: $name \n Location: $location \n TypeOfEvent: $type \n DateOfEvent: $date \n TimeToFinish: $time \n Phone: $phone \n Message: $message";
-$recipient = "drk.sky@gmail.com";
-$subject = "Make-up Booking Form";
-$mailheader = "From: $email \r\n";
-mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
-echo "Thank You!";
-?>
 
 
 
